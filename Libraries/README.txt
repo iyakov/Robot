@@ -1,0 +1,1 @@
+Copy these libraries under '.\arduino-1.0.5-r2\libraries\'
