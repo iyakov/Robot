@@ -1,8 +1,8 @@
+#ifdef VSEDITOR
+
 #include "Emulator.h"
 #include "Pins.h"
 #include "ArduinoFix.h"
-
-#ifdef VSEDITOR
 
 pins pins;
 
