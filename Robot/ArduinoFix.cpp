@@ -6,9 +6,7 @@
 
 #ifdef VSEDITOR
 
-int main(){ return 1; }
-
-void pinMode(int a, int b){}
+//void pinMode(int a, int b){}
 
 void delay(int a){}
 
