@@ -14,10 +14,12 @@
     <ClInclude Include="ArduinoFix.h" />
     <ClInclude Include="Emulator.h" />
     <ClInclude Include="Morse.h" />
+    <ClInclude Include="Pins.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ArduinoFix.cpp" />
     <ClCompile Include="Emulator.cpp" />
+    <ClCompile Include="Pins.cpp" />
     <ClCompile Include="Robot.ino" />
     <ClCompile Include="Morse.cpp" />
   </ItemGroup>

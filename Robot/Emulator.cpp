@@ -1,9 +1,10 @@
 #include "Emulator.h"
+#include "Pins.h"
 #include "ArduinoFix.h"
 
 #ifdef VSEDITOR
 
-int pins[20];
+pins pins;
 
 int main()
 {
@@ -23,13 +24,33 @@ void pinMode(int pin, int mode)
     }
     if (pin >= 0 && pin <= 13)
     {
-        pins[pin] = mode;
+        pins.mode(pin, mode);
     }
     else if (pin >= A0 && pin <= A5)
     {
-        pins[14 + (A0 - pin)] = mode;
+        pins.mode(14 + (A0 - pin), mode);
     }
     else 
+    {
+        throw invalidPinNumber();
+    }
+}
+
+void digitalWrite(int pin, int value)
+{
+    if (value != HIGH && value != LOW)
+    {
+        throw invalidValue();
+    }
+    if (pin >= 0 && pin <= 13)
+    {
+        pins.write(pin, value);
+    }
+    else if (pin >= A0 && pin <= A5)
+    {
+        pins.write(14 + (A0 - pin), value);
+    }
+    else
     {
         throw invalidPinNumber();
     }

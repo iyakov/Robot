@@ -10,8 +10,12 @@
 
 void delay(int a){}
 
-void digitalWrite(int a, int b){}
+//void digitalWrite(int a, int b){}
 
 int digitalRead(int a){ return 1; }
+
+void analogWrite(int a, int b){}
+
+int analogRead(int a){ return 1; }
 
 #endif

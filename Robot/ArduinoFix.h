@@ -29,6 +29,8 @@
         void delay(int);
         void digitalWrite(int, int);
         int digitalRead(int);
+        void analogWrite(int, int);
+        int analogRead(int);
 
     #else
 

@@ -27,6 +27,9 @@
     <ClCompile Include="ArduinoFix.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Pins.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Morse.h">
@@ -36,6 +39,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ArduinoFix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Pins.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
