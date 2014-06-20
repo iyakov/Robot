@@ -4,7 +4,7 @@
 #include "Pins.h"
 #include "ArduinoFix.h"
 
-class pins pins;
+class pins _pins = pins();
 
 int main()
 {
@@ -24,11 +24,11 @@ void pinMode(int pin, int mode)
     }
     if (pin >= 0 && pin <= 13)
     {
-        pins.mode(pin, mode);
+        _pins.mode(pin, mode);
     }
     else if (pin >= A0 && pin <= A5)
     {
-        pins.mode(14 + (A0 - pin), mode);
+        _pins.mode(14 + (A0 - pin), mode);
     }
     else 
     {
@@ -44,11 +44,11 @@ void digitalWrite(int pin, int value)
     }
     if (pin >= 0 && pin <= 13)
     {
-        pins.write(pin, value);
+        _pins.write(pin, value);
     }
     else if (pin >= A0 && pin <= A5)
     {
-        pins.write(14 + (A0 - pin), value);
+        _pins.write(14 + (A0 - pin), value);
     }
     else
     {
@@ -62,6 +62,8 @@ void delay(int ms)
     {
         throw invalidDelay();
     }
+
+    _pins.delay(ms);
 }
 
 #endif
