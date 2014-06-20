@@ -4,7 +4,7 @@
 #include "Pins.h"
 #include "ArduinoFix.h"
 
-pins pins;
+class pins pins;
 
 int main()
 {
