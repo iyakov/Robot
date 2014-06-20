@@ -10,6 +10,7 @@
 
     #ifdef VSEDITOR
 
+        #define PIN_MODE_NOT_SET -1
         #define INPUT 1
         #define OUTPUT 2
         #define HIGH 1

@@ -8,10 +8,11 @@
 #include "ArduinoFix.h"
 #include "Morse.h"
 
-Morse morse(13);
+class Morse morse;
 
 void setup()
 {
+    morse = Morse(13);
 }
 
 void loop()

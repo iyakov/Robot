@@ -11,6 +11,7 @@ Released into the public domain.
 class Morse
 {
 public:
+    Morse();
     Morse(int pin);
     void dot();
     void dash();
