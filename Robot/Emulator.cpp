@@ -56,4 +56,12 @@ void digitalWrite(int pin, int value)
     }
 }
 
+void delay(int ms)
+{
+    if (ms < 0)
+    {
+        throw invalidDelay();
+    }
+}
+
 #endif

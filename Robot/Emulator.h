@@ -8,6 +8,7 @@
     class invalidPinMode{};
     class invalidPinNumber{};
     class invalidValue{};
+    class invalidDelay{};
 
     #endif
 

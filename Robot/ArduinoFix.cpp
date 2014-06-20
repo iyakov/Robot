@@ -8,7 +8,7 @@
 
 //void pinMode(int a, int b){}
 
-void delay(int a){}
+//void delay(int a){}
 
 //void digitalWrite(int a, int b){}
 
