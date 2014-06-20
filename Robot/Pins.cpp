@@ -2,6 +2,7 @@
 
 #include "Pins.h"
 #include "ArduinoFix.h"
+#include "stdio.h"
 
 pins::pins()
 {
@@ -43,12 +44,12 @@ int pins::read(int pin)
 
 void pins::delay(int ms)
 {
-    for (int i = 0; i < ms / 100; i++) pins::tick();
+    for (int i = -1; i < ms / 100; i++) pins::tick();
 }
-
+static int i = 0;
 void pins::tick()
 {
-
+    printf("tick %d \n", i++);
 }
 
 #endif

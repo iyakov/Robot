@@ -21,15 +21,15 @@ Morse::Morse(int pin)
 void Morse::dot()
 {
     digitalWrite(_pin, HIGH);
-    delay(250);
+    delay(99);
     digitalWrite(_pin, LOW);
-    delay(250);
+    delay(99);
 }
 
 void Morse::dash()
 {
     digitalWrite(_pin, HIGH);
-    delay(1000);
+    delay(99);
     digitalWrite(_pin, LOW);
-    delay(250);
+    delay(99);
 }

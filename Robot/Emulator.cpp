@@ -4,16 +4,12 @@
 #include "Pins.h"
 #include "ArduinoFix.h"
 
-class pins _pins = pins();
+class pins pins = pins::pins();
 
 int main()
 {
     setup();
-    for (int x = 0; x < 100; x++)
-    {
-        loop();
-        delay(99);
-    }
+    for (int x = 0; x < 100; x++) loop();
 }
 
 void pinMode(int pin, int mode)
@@ -24,11 +20,11 @@ void pinMode(int pin, int mode)
     }
     if (pin >= 0 && pin <= 13)
     {
-        _pins.mode(pin, mode);
+        pins.mode(pin, mode);
     }
     else if (pin >= A0 && pin <= A5)
     {
-        _pins.mode(14 + (A0 - pin), mode);
+        pins.mode(14 + (A0 - pin), mode);
     }
     else 
     {
@@ -44,11 +40,11 @@ void digitalWrite(int pin, int value)
     }
     if (pin >= 0 && pin <= 13)
     {
-        _pins.write(pin, value);
+        pins.write(pin, value);
     }
     else if (pin >= A0 && pin <= A5)
     {
-        _pins.write(14 + (A0 - pin), value);
+        pins.write(14 + (A0 - pin), value);
     }
     else
     {
@@ -63,7 +59,7 @@ void delay(int ms)
         throw invalidDelay();
     }
 
-    _pins.delay(ms);
+    pins.delay(ms);
 }
 
 #endif
