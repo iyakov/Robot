@@ -43,6 +43,11 @@ int pins::read(int pin)
 
 void pins::delay(int ms)
 {
+    for (int i = 0; i < ms / 100; i++) pins::tick();
+}
+
+void pins::tick()
+{
 
 }
 
