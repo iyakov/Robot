@@ -46,10 +46,13 @@ void pins::delay(int ms)
 {
     for (int i = -1; i < ms / 100; i++) pins::tick();
 }
+
 static int i = 0;
 void pins::tick()
 {
     printf("tick %d \n", i++);
+
+
 }
 
 #endif
